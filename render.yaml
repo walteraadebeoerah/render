@@ -1,0 +1,9 @@
+services:
+  - name: miner-service
+    env: docker
+    plan: free
+    buildCommand: "docker build -t miner ."
+    startCommand: "docker run miner"
+    autoDeploy: true
+    branch: main
+    
